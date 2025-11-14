@@ -1,12 +1,15 @@
 package au.com.telstra.simcardactivator.services;
 
 import au.com.telstra.simcardactivator.entities.SimCard;
+import au.com.telstra.simcardactivator.model.SimActuatorResponse;
+import au.com.telstra.simcardactivator.model.SimObject;
 
-import java.util.Optional;
+import java.util.Map;
 
 public interface SimCardService {
 
-    public Optional<SimCard> getSimRecord(long id);
+    public Map<String, Object> getSimRecord(long id);
 
-    public void saveSimRecord(SimCard simCard);
+    public void saveSimRecord(SimObject object, SimActuatorResponse response);
+
 }

@@ -5,7 +5,7 @@ public class SimActuatorResponse {
     private boolean success;
 
     //will check whether response is true or false
-    public boolean isSuccess(){
+    public boolean getSuccess(){
         return success;
     }
 

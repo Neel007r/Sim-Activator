@@ -1,5 +1,8 @@
 package au.com.telstra.simcardactivator.entities;
 
+import au.com.telstra.simcardactivator.model.SimObject;
+import au.com.telstra.simcardactivator.model.SimActuatorResponse;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,6 +22,15 @@ public class SimCard {
     }
 
     public SimCard(String iccid, String customerEmail, boolean success) {
+        this.iccid=iccid;
+        this.customerEmail=customerEmail;
+        this.active=success;
+    }
+
+    public SimCard(SimObject request, SimActuatorResponse respons){
+            this.iccid=request.getIccid();
+            this.customerEmail= request.getCustomerEmail();
+            this.active= respons.getSuccess();
     }
 
 
