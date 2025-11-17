@@ -1,6 +1,5 @@
 package au.com.telstra.simcardactivator.services;
 
-import au.com.telstra.simcardactivator.entities.SimCard;
 import au.com.telstra.simcardactivator.model.SimActuatorResponse;
 import au.com.telstra.simcardactivator.model.SimObject;
 

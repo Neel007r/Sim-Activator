@@ -13,6 +13,12 @@ public class SimObject {
     public SimObject() {
     }
 
+    public SimObject(String iccid, String customerEmail, boolean active) {
+        this.iccid = iccid;
+        this.customerEmail = customerEmail;
+        this.active = active;
+    }
+
     public SimObject(SimCard simCard) {
         this.iccid = simCard.getIccid();
         this.customerEmail=simCard.getCustomerEmail();

@@ -36,7 +36,7 @@ public class SimCardServiceImpl implements SimCardService{
     @Override
     public void saveSimRecord(SimObject object, SimActuatorResponse response) {
         SimCard simCard = new SimCard(object, response);
-        SimCard save = simCardRepo.save(simCard);
+        simCardRepo.save(simCard);
     }
 
 }

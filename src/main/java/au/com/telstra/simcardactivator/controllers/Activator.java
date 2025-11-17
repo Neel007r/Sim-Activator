@@ -12,10 +12,10 @@ public class Activator {
     @Autowired
     private RestTemplate restTemplate;
 
-    private final String url = "http://localhost:8444/actuate";
+    private static final String URL = "http://localhost:8444/actuate";
 
     public SimActuatorResponse activateSim(SimObject object) {
-            return restTemplate.postForObject(url, object, SimActuatorResponse.class);
+            return restTemplate.postForObject(URL, object, SimActuatorResponse.class);
     }
 
 
